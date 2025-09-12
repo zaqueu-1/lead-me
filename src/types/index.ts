@@ -19,7 +19,8 @@ export interface Opportunity {
 
 export interface LeadFilters {
     search: string;
-    status: string;
+    statuses: string[];
+    sources: string[];
     sortBy: 'score' | 'name' | 'company';
     sortOrder: 'asc' | 'desc';
 }

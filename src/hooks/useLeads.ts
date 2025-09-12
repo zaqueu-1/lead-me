@@ -1,12 +1,20 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Lead, Opportunity, LeadFilters } from '../types';
-import { saveFiltersToStorage, loadFiltersFromStorage } from '../utils/localStorage';
+import {
+    saveFiltersToStorage,
+    loadFiltersFromStorage,
+    saveLeadsToStorage,
+    loadLeadsFromStorage,
+    saveOpportunitiesToStorage,
+    loadOpportunitiesFromStorage
+} from '../utils/localStorage';
 import { generateId } from '../utils/validation';
 import leadsData from '../data/leads.json';
 
 const DEFAULT_FILTERS: LeadFilters = {
     search: '',
-    status: '',
+    statuses: [],
+    sources: [],
     sortBy: 'score',
     sortOrder: 'desc'
 };
@@ -18,13 +26,35 @@ export const useLeads = () => {
     const [filters, setFilters] = useState<LeadFilters>(DEFAULT_FILTERS);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const [isInitialized, setIsInitialized] = useState(false);
 
     useEffect(() => {
         const loadData = async () => {
             try {
                 setLoading(true);
                 await new Promise(resolve => setTimeout(resolve, 500));
-                setLeads(leadsData as Lead[]);
+
+                const savedOpportunities = loadOpportunitiesFromStorage();
+                const loadedOpportunities = (savedOpportunities && Array.isArray(savedOpportunities)) ? savedOpportunities : [];
+                const savedLeads = loadLeadsFromStorage();
+                let loadedLeads: Lead[];
+
+                if (savedLeads) {
+                    loadedLeads = savedLeads;
+                } else {
+                    loadedLeads = leadsData as Lead[];
+                }
+
+                const opportunityLeadIds = loadedOpportunities.map(opp => opp.leadId);
+                const existingLeadIds = loadedLeads.map(lead => lead.id);
+                const missingLeadIds = opportunityLeadIds.filter(id => existingLeadIds.includes(id));
+
+                if (missingLeadIds.length > 0) {
+                    loadedLeads = loadedLeads.filter(lead => !opportunityLeadIds.includes(lead.id));
+                }
+
+                setLeads(loadedLeads);
+                setOpportunities(loadedOpportunities);
 
                 const savedFilters = loadFiltersFromStorage();
                 if (savedFilters) {
@@ -36,6 +66,7 @@ export const useLeads = () => {
                 setError('Error loading lead data');
             } finally {
                 setLoading(false);
+                setIsInitialized(true);
             }
         };
 
@@ -45,6 +76,20 @@ export const useLeads = () => {
     useEffect(() => {
         saveFiltersToStorage(filters);
     }, [filters]);
+
+    useEffect(() => {
+        if (isInitialized) {
+            const opportunityLeadIds = opportunities.map(opp => opp.leadId);
+            const validLeads = leads.filter(lead => !opportunityLeadIds.includes(lead.id));
+            saveLeadsToStorage(validLeads);
+        }
+    }, [leads, opportunities, isInitialized]);
+
+    useEffect(() => {
+        if (isInitialized) {
+            saveOpportunitiesToStorage(opportunities);
+        }
+    }, [opportunities, isInitialized]);
 
     const filteredLeads = useCallback(() => {
         let filtered = [...leads];
@@ -57,8 +102,12 @@ export const useLeads = () => {
             );
         }
 
-        if (filters.status) {
-            filtered = filtered.filter(lead => lead.status === filters.status);
+        if (filters.statuses.length > 0) {
+            filtered = filtered.filter(lead => filters.statuses.includes(lead.status));
+        }
+
+        if (filters.sources.length > 0) {
+            filtered = filtered.filter(lead => filters.sources.includes(lead.source));
         }
 
         filtered.sort((a, b) => {
@@ -122,7 +171,11 @@ export const useLeads = () => {
 
             setOpportunities(prev => [...prev, newOpportunity]);
 
-            await updateLead(lead.id, { status: 'won' });
+            setLeads(prev => prev.filter(l => l.id !== lead.id));
+
+            if (selectedLead?.id === lead.id) {
+                setSelectedLead(null);
+            }
 
             setError(null);
             return newOpportunity;
@@ -133,6 +186,33 @@ export const useLeads = () => {
             setLoading(false);
         }
     }, [updateLead]);
+
+    const revertToLead = useCallback(async (opportunity: Opportunity) => {
+        try {
+            setLoading(true);
+
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            const revertedLead: Lead = {
+                id: opportunity.leadId,
+                name: opportunity.name.split(' - ')[0] || opportunity.name,
+                company: opportunity.accountName,
+                email: `${opportunity.name.toLowerCase().replace(/\s+/g, '.')}@${opportunity.accountName.toLowerCase().replace(/\s+/g, '')}.com`,
+                source: 'converted_back',
+                score: 75,
+                status: 'qualified'
+            };
+
+            setLeads(prev => [...prev, revertedLead]);
+            setOpportunities(prev => prev.filter(o => o.id !== opportunity.id));
+
+            setError(null);
+        } catch (error) {
+            setError('Error reverting opportunity to lead');
+        } finally {
+            setLoading(false);
+        }
+    }, []);
 
     return {
         leads: filteredLeads(),
@@ -145,6 +225,7 @@ export const useLeads = () => {
         setFilters,
         updateLead,
         convertToOpportunity,
+        revertToLead,
         setError
     };
 };
