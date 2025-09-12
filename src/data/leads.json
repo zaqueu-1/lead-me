@@ -1,0 +1,1802 @@
+[
+    {
+        "id": "1",
+        "name": "John Smith",
+        "company": "TechCorp Inc",
+        "email": "john.smith@techcorp.com",
+        "source": "website",
+        "score": 85,
+        "status": "new"
+    },
+    {
+        "id": "2",
+        "name": "Sarah Johnson",
+        "company": "InnovateX Solutions",
+        "email": "sarah.johnson@innovatex.com",
+        "source": "referral",
+        "score": 92,
+        "status": "contacted"
+    },
+    {
+        "id": "3",
+        "name": "Michael Davis",
+        "company": "StartupABC",
+        "email": "michael@startupabc.com",
+        "source": "social_media",
+        "score": 78,
+        "status": "qualified"
+    },
+    {
+        "id": "4",
+        "name": "Emily Wilson",
+        "company": "MegaSoft Technologies",
+        "email": "emily.wilson@megasoft.com",
+        "source": "email_campaign",
+        "score": 95,
+        "status": "proposal"
+    },
+    {
+        "id": "5",
+        "name": "David Brown",
+        "company": "DataFlow Systems",
+        "email": "david@dataflow.io",
+        "source": "website",
+        "score": 67,
+        "status": "new"
+    },
+    {
+        "id": "6",
+        "name": "Lisa Garcia",
+        "company": "CloudTech Solutions",
+        "email": "lisa.garcia@cloudtech.com",
+        "source": "referral",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "7",
+        "name": "Robert Miller",
+        "company": "EcoSolutions Ltd",
+        "email": "robert@ecosolutions.com",
+        "source": "trade_show",
+        "score": 73,
+        "status": "qualified"
+    },
+    {
+        "id": "8",
+        "name": "Jennifer Taylor",
+        "company": "FinancePro Corp",
+        "email": "jennifer.taylor@financepro.com",
+        "source": "cold_call",
+        "score": 81,
+        "status": "new"
+    },
+    {
+        "id": "9",
+        "name": "Christopher Lee",
+        "company": "MediaPlus Agency",
+        "email": "christopher@mediaplus.com",
+        "source": "website",
+        "score": 90,
+        "status": "won"
+    },
+    {
+        "id": "10",
+        "name": "Amanda Anderson",
+        "company": "HealthcareSys Inc",
+        "email": "amanda.anderson@healthcaresys.com",
+        "source": "partnership",
+        "score": 76,
+        "status": "contacted"
+    },
+    {
+        "id": "11",
+        "name": "Thomas White",
+        "company": "RetailChain Corp",
+        "email": "thomas@retailchain.com",
+        "source": "email_campaign",
+        "score": 82,
+        "status": "lost"
+    },
+    {
+        "id": "12",
+        "name": "Jessica Martinez",
+        "company": "EdTech Innovations",
+        "email": "jessica.martinez@edtechinc.com",
+        "source": "social_media",
+        "score": 89,
+        "status": "qualified"
+    },
+    {
+        "id": "13",
+        "name": "Daniel Thompson",
+        "company": "SecureNet Systems",
+        "email": "daniel@securenet.com",
+        "source": "website",
+        "score": 71,
+        "status": "new"
+    },
+    {
+        "id": "14",
+        "name": "Michelle Rodriguez",
+        "company": "GreenEnergy Solutions",
+        "email": "michelle.rodriguez@greenenergy.com",
+        "source": "referral",
+        "score": 84,
+        "status": "contacted"
+    },
+    {
+        "id": "15",
+        "name": "James Wilson",
+        "company": "AutoTech Dynamics",
+        "email": "james@autotech.com",
+        "source": "trade_show",
+        "score": 77,
+        "status": "qualified"
+    },
+    {
+        "id": "16",
+        "name": "Rachel Green",
+        "company": "LogiStream Corp",
+        "email": "rachel.green@logistream.com",
+        "source": "cold_call",
+        "score": 86,
+        "status": "proposal"
+    },
+    {
+        "id": "17",
+        "name": "Kevin Clark",
+        "company": "SmartHome Technologies",
+        "email": "kevin@smarthome.com",
+        "source": "website",
+        "score": 79,
+        "status": "new"
+    },
+    {
+        "id": "18",
+        "name": "Nicole Young",
+        "company": "BioMed Research",
+        "email": "nicole.young@biomed.com",
+        "source": "email_campaign",
+        "score": 93,
+        "status": "contacted"
+    },
+    {
+        "id": "19",
+        "name": "Mark Robinson",
+        "company": "CyberShield Security",
+        "email": "mark@cybershield.com",
+        "source": "social_media",
+        "score": 75,
+        "status": "qualified"
+    },
+    {
+        "id": "20",
+        "name": "Stephanie Hall",
+        "company": "AeroSpace Dynamics",
+        "email": "stephanie.hall@aerospace.com",
+        "source": "partnership",
+        "score": 91,
+        "status": "won"
+    },
+    {
+        "id": "21",
+        "name": "Jason King",
+        "company": "NanoTech Industries",
+        "email": "jason@nanotech.com",
+        "source": "website",
+        "score": 68,
+        "status": "new"
+    },
+    {
+        "id": "22",
+        "name": "Lauren Scott",
+        "company": "VirtualReality Labs",
+        "email": "lauren.scott@vrlab.com",
+        "source": "referral",
+        "score": 87,
+        "status": "contacted"
+    },
+    {
+        "id": "23",
+        "name": "Ryan Adams",
+        "company": "BlockChain Ventures",
+        "email": "ryan@blockchain.com",
+        "source": "trade_show",
+        "score": 80,
+        "status": "qualified"
+    },
+    {
+        "id": "24",
+        "name": "Kimberly Turner",
+        "company": "AI Solutions Group",
+        "email": "kimberly.turner@aisolutions.com",
+        "source": "cold_call",
+        "score": 94,
+        "status": "proposal"
+    },
+    {
+        "id": "25",
+        "name": "Brandon Baker",
+        "company": "RoboTech Systems",
+        "email": "brandon@robotech.com",
+        "source": "website",
+        "score": 72,
+        "status": "new"
+    },
+    {
+        "id": "26",
+        "name": "Melissa Carter",
+        "company": "QuantumComputing Corp",
+        "email": "melissa.carter@quantum.com",
+        "source": "email_campaign",
+        "score": 96,
+        "status": "contacted"
+    },
+    {
+        "id": "27",
+        "name": "Eric Phillips",
+        "company": "SolarTech Energy",
+        "email": "eric@solartech.com",
+        "source": "social_media",
+        "score": 74,
+        "status": "qualified"
+    },
+    {
+        "id": "28",
+        "name": "Samantha Mitchell",
+        "company": "BioTech Innovations",
+        "email": "samantha.mitchell@biotech.com",
+        "source": "partnership",
+        "score": 88,
+        "status": "lost"
+    },
+    {
+        "id": "29",
+        "name": "Gregory Campbell",
+        "company": "CloudCompute Solutions",
+        "email": "gregory@cloudcompute.com",
+        "source": "website",
+        "score": 83,
+        "status": "new"
+    },
+    {
+        "id": "30",
+        "name": "Vanessa Parker",
+        "company": "DigitalMarketing Pro",
+        "email": "vanessa.parker@digitalmarketing.com",
+        "source": "referral",
+        "score": 89,
+        "status": "contacted"
+    },
+    {
+        "id": "31",
+        "name": "Timothy Evans",
+        "company": "TelecomNext Corp",
+        "email": "timothy@telecomnext.com",
+        "source": "trade_show",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "32",
+        "name": "Crystal Morris",
+        "company": "FoodTech Solutions",
+        "email": "crystal.morris@foodtech.com",
+        "source": "cold_call",
+        "score": 85,
+        "status": "proposal"
+    },
+    {
+        "id": "33",
+        "name": "Andrew Rogers",
+        "company": "GameDev Studios",
+        "email": "andrew@gamedev.com",
+        "source": "website",
+        "score": 70,
+        "status": "new"
+    },
+    {
+        "id": "34",
+        "name": "Patricia Reed",
+        "company": "EdTech Platform",
+        "email": "patricia.reed@edtechplatform.com",
+        "source": "email_campaign",
+        "score": 92,
+        "status": "contacted"
+    },
+    {
+        "id": "35",
+        "name": "Joshua Cook",
+        "company": "MedDevice Innovations",
+        "email": "joshua@meddevice.com",
+        "source": "social_media",
+        "score": 78,
+        "status": "qualified"
+    },
+    {
+        "id": "36",
+        "name": "Diana Morgan",
+        "company": "FinTech Revolution",
+        "email": "diana.morgan@fintech.com",
+        "source": "partnership",
+        "score": 90,
+        "status": "won"
+    },
+    {
+        "id": "37",
+        "name": "Kenneth Bell",
+        "company": "SpaceTech Ventures",
+        "email": "kenneth@spacetech.com",
+        "source": "website",
+        "score": 73,
+        "status": "new"
+    },
+    {
+        "id": "38",
+        "name": "Tiffany Murphy",
+        "company": "AgriTech Solutions",
+        "email": "tiffany.murphy@agritech.com",
+        "source": "referral",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "39",
+        "name": "Sean Bailey",
+        "company": "CleanEnergy Systems",
+        "email": "sean@cleanenergy.com",
+        "source": "trade_show",
+        "score": 81,
+        "status": "qualified"
+    },
+    {
+        "id": "40",
+        "name": "Heather Rivera",
+        "company": "SmartCity Technologies",
+        "email": "heather.rivera@smartcity.com",
+        "source": "cold_call",
+        "score": 87,
+        "status": "proposal"
+    },
+    {
+        "id": "41",
+        "name": "Marcus Cooper",
+        "company": "Dronetech Industries",
+        "email": "marcus@dronetech.com",
+        "source": "website",
+        "score": 69,
+        "status": "new"
+    },
+    {
+        "id": "42",
+        "name": "Natalie Richardson",
+        "company": "IoT Solutions Group",
+        "email": "natalie.richardson@iot.com",
+        "source": "email_campaign",
+        "score": 94,
+        "status": "contacted"
+    },
+    {
+        "id": "43",
+        "name": "Jeremy Cox",
+        "company": "3D Printing Pro",
+        "email": "jeremy@3dprinting.com",
+        "source": "social_media",
+        "score": 77,
+        "status": "qualified"
+    },
+    {
+        "id": "44",
+        "name": "Allison Ward",
+        "company": "VR Entertainment",
+        "email": "allison.ward@vrentertainment.com",
+        "source": "partnership",
+        "score": 83,
+        "status": "lost"
+    },
+    {
+        "id": "45",
+        "name": "Carl Torres",
+        "company": "AutoPilot Systems",
+        "email": "carl@autopilot.com",
+        "source": "website",
+        "score": 75,
+        "status": "new"
+    },
+    {
+        "id": "46",
+        "name": "Monica Peterson",
+        "company": "DataAnalytics Corp",
+        "email": "monica.peterson@dataanalytics.com",
+        "source": "referral",
+        "score": 91,
+        "status": "contacted"
+    },
+    {
+        "id": "47",
+        "name": "Victor Gray",
+        "company": "CyberSecurity Plus",
+        "email": "victor@cybersecurity.com",
+        "source": "trade_show",
+        "score": 79,
+        "status": "qualified"
+    },
+    {
+        "id": "48",
+        "name": "Brittany James",
+        "company": "MobileApp Developers",
+        "email": "brittany.james@mobileapp.com",
+        "source": "cold_call",
+        "score": 85,
+        "status": "proposal"
+    },
+    {
+        "id": "49",
+        "name": "Gerald Watson",
+        "company": "CloudStorage Solutions",
+        "email": "gerald@cloudstorage.com",
+        "source": "website",
+        "score": 71,
+        "status": "new"
+    },
+    {
+        "id": "50",
+        "name": "Courtney Brooks",
+        "company": "HealthTech Innovations",
+        "email": "courtney.brooks@healthtech.com",
+        "source": "email_campaign",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "51",
+        "name": "Douglas Kelly",
+        "company": "SmartGrid Technologies",
+        "email": "douglas@smartgrid.com",
+        "source": "social_media",
+        "score": 82,
+        "status": "qualified"
+    },
+    {
+        "id": "52",
+        "name": "Jacqueline Sanders",
+        "company": "PropTech Solutions",
+        "email": "jacqueline.sanders@proptech.com",
+        "source": "partnership",
+        "score": 93,
+        "status": "won"
+    },
+    {
+        "id": "53",
+        "name": "Ralph Price",
+        "company": "WaterTech Systems",
+        "email": "ralph@watertech.com",
+        "source": "website",
+        "score": 74,
+        "status": "new"
+    },
+    {
+        "id": "54",
+        "name": "Denise Bennett",
+        "company": "RetailTech Solutions",
+        "email": "denise.bennett@retailtech.com",
+        "source": "referral",
+        "score": 89,
+        "status": "contacted"
+    },
+    {
+        "id": "55",
+        "name": "Wayne Wood",
+        "company": "SportsTech Ventures",
+        "email": "wayne@sportstech.com",
+        "source": "trade_show",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "56",
+        "name": "Gloria Barnes",
+        "company": "LegalTech Pro",
+        "email": "gloria.barnes@legaltech.com",
+        "source": "cold_call",
+        "score": 87,
+        "status": "proposal"
+    },
+    {
+        "id": "57",
+        "name": "Clarence Hughes",
+        "company": "EnergyStorage Corp",
+        "email": "clarence@energystorage.com",
+        "source": "website",
+        "score": 80,
+        "status": "new"
+    },
+    {
+        "id": "58",
+        "name": "Joyce Butler",
+        "company": "InsurTech Solutions",
+        "email": "joyce.butler@insurtech.com",
+        "source": "email_campaign",
+        "score": 95,
+        "status": "contacted"
+    },
+    {
+        "id": "59",
+        "name": "Austin Flores",
+        "company": "TravelTech Systems",
+        "email": "austin@traveltech.com",
+        "source": "social_media",
+        "score": 73,
+        "status": "qualified"
+    },
+    {
+        "id": "60",
+        "name": "Cheryl Washington",
+        "company": "HRTech Solutions",
+        "email": "cheryl.washington@hrtech.com",
+        "source": "partnership",
+        "score": 84,
+        "status": "lost"
+    },
+    {
+        "id": "61",
+        "name": "Eugene Henderson",
+        "company": "SupplyChain Tech",
+        "email": "eugene@supplychain.com",
+        "source": "website",
+        "score": 78,
+        "status": "new"
+    },
+    {
+        "id": "62",
+        "name": "Beverly Coleman",
+        "company": "FashionTech Group",
+        "email": "beverly.coleman@fashiontech.com",
+        "source": "referral",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "63",
+        "name": "Harold Jenkins",
+        "company": "ConstructionTech",
+        "email": "harold@constructiontech.com",
+        "source": "trade_show",
+        "score": 77,
+        "status": "qualified"
+    },
+    {
+        "id": "64",
+        "name": "Sharon Perry",
+        "company": "ManufacturingTech",
+        "email": "sharon.perry@manufacturingtech.com",
+        "source": "cold_call",
+        "score": 91,
+        "status": "proposal"
+    },
+    {
+        "id": "65",
+        "name": "Peter Powell",
+        "company": "AutomationSystems",
+        "email": "peter@automation.com",
+        "source": "website",
+        "score": 72,
+        "status": "new"
+    },
+    {
+        "id": "66",
+        "name": "Donna Long",
+        "company": "LogisticsTech Pro",
+        "email": "donna.long@logisticstech.com",
+        "source": "email_campaign",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "67",
+        "name": "Fred Patterson",
+        "company": "WasteTech Solutions",
+        "email": "fred@wastetech.com",
+        "source": "social_media",
+        "score": 75,
+        "status": "qualified"
+    },
+    {
+        "id": "68",
+        "name": "Joan Hughes",
+        "company": "PackagingTech Corp",
+        "email": "joan.hughes@packagingtech.com",
+        "source": "partnership",
+        "score": 89,
+        "status": "won"
+    },
+    {
+        "id": "69",
+        "name": "Willie Ramirez",
+        "company": "TransportTech",
+        "email": "willie@transporttech.com",
+        "source": "website",
+        "score": 81,
+        "status": "new"
+    },
+    {
+        "id": "70",
+        "name": "Marie Watson",
+        "company": "SensorTech Industries",
+        "email": "marie.watson@sensortech.com",
+        "source": "referral",
+        "score": 83,
+        "status": "contacted"
+    },
+    {
+        "id": "71",
+        "name": "Roy Brooks",
+        "company": "NetworkTech Solutions",
+        "email": "roy@networktech.com",
+        "source": "trade_show",
+        "score": 79,
+        "status": "qualified"
+    },
+    {
+        "id": "72",
+        "name": "Kathryn Kelly",
+        "company": "DatabaseTech Corp",
+        "email": "kathryn.kelly@databasetech.com",
+        "source": "cold_call",
+        "score": 92,
+        "status": "proposal"
+    },
+    {
+        "id": "73",
+        "name": "Arthur Sanders",
+        "company": "SecurityTech Plus",
+        "email": "arthur@securitytech.com",
+        "source": "website",
+        "score": 70,
+        "status": "new"
+    },
+    {
+        "id": "74",
+        "name": "Frances Price",
+        "company": "CloudSecurity Corp",
+        "email": "frances.price@cloudsecurity.com",
+        "source": "email_campaign",
+        "score": 87,
+        "status": "contacted"
+    },
+    {
+        "id": "75",
+        "name": "Juan Bennett",
+        "company": "MobileTech Solutions",
+        "email": "juan@mobiletech.com",
+        "source": "social_media",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "76",
+        "name": "Terry Wood",
+        "company": "WebTech Developers",
+        "email": "terry.wood@webtech.com",
+        "source": "partnership",
+        "score": 85,
+        "status": "lost"
+    },
+    {
+        "id": "77",
+        "name": "Eugene Barnes",
+        "company": "DevOps Solutions",
+        "email": "eugene@devops.com",
+        "source": "website",
+        "score": 74,
+        "status": "new"
+    },
+    {
+        "id": "78",
+        "name": "Doris Hughes",
+        "company": "TestingTech Corp",
+        "email": "doris.hughes@testingtech.com",
+        "source": "referral",
+        "score": 90,
+        "status": "contacted"
+    },
+    {
+        "id": "79",
+        "name": "Philip Butler",
+        "company": "QualityAssurance Tech",
+        "email": "philip@qatech.com",
+        "source": "trade_show",
+        "score": 78,
+        "status": "qualified"
+    },
+    {
+        "id": "80",
+        "name": "Ruby Flores",
+        "company": "ProjectManagement Pro",
+        "email": "ruby.flores@pmtech.com",
+        "source": "cold_call",
+        "score": 86,
+        "status": "proposal"
+    },
+    {
+        "id": "81",
+        "name": "Louis Washington",
+        "company": "ConsultingTech Group",
+        "email": "louis@consultingtech.com",
+        "source": "website",
+        "score": 82,
+        "status": "new"
+    },
+    {
+        "id": "82",
+        "name": "Jane Henderson",
+        "company": "TrainingTech Solutions",
+        "email": "jane.henderson@trainingtech.com",
+        "source": "email_campaign",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "83",
+        "name": "Jack Coleman",
+        "company": "SupportTech Systems",
+        "email": "jack@supporttech.com",
+        "source": "social_media",
+        "score": 73,
+        "status": "qualified"
+    },
+    {
+        "id": "84",
+        "name": "Alice Jenkins",
+        "company": "MaintenanceTech Corp",
+        "email": "alice.jenkins@maintenancetech.com",
+        "source": "partnership",
+        "score": 91,
+        "status": "won"
+    },
+    {
+        "id": "85",
+        "name": "Albert Perry",
+        "company": "MonitoringTech Pro",
+        "email": "albert@monitoringtech.com",
+        "source": "website",
+        "score": 77,
+        "status": "new"
+    },
+    {
+        "id": "86",
+        "name": "Betty Powell",
+        "company": "AnalyticsTech Group",
+        "email": "betty.powell@analyticstech.com",
+        "source": "referral",
+        "score": 84,
+        "status": "contacted"
+    },
+    {
+        "id": "87",
+        "name": "Walter Long",
+        "company": "ReportingTech Solutions",
+        "email": "walter@reportingtech.com",
+        "source": "trade_show",
+        "score": 80,
+        "status": "qualified"
+    },
+    {
+        "id": "88",
+        "name": "Carolyn Patterson",
+        "company": "DashboardTech Corp",
+        "email": "carolyn.patterson@dashboardtech.com",
+        "source": "cold_call",
+        "score": 89,
+        "status": "proposal"
+    },
+    {
+        "id": "89",
+        "name": "Joe Ramirez",
+        "company": "VisualizationTech",
+        "email": "joe@visualizationtech.com",
+        "source": "website",
+        "score": 75,
+        "status": "new"
+    },
+    {
+        "id": "90",
+        "name": "Evelyn Watson",
+        "company": "IntegrationTech Pro",
+        "email": "evelyn.watson@integrationtech.com",
+        "source": "email_campaign",
+        "score": 93,
+        "status": "contacted"
+    },
+    {
+        "id": "91",
+        "name": "Billy Brooks",
+        "company": "APITech Solutions",
+        "email": "billy@apitech.com",
+        "source": "social_media",
+        "score": 71,
+        "status": "qualified"
+    },
+    {
+        "id": "92",
+        "name": "Jean Kelly",
+        "company": "MicroservicesTech",
+        "email": "jean.kelly@microservicestech.com",
+        "source": "partnership",
+        "score": 87,
+        "status": "lost"
+    },
+    {
+        "id": "93",
+        "name": "Ralph Sanders",
+        "company": "ContainerTech Corp",
+        "email": "ralph@containertech.com",
+        "source": "website",
+        "score": 79,
+        "status": "new"
+    },
+    {
+        "id": "94",
+        "name": "Katherine Price",
+        "company": "KubernetesTech Pro",
+        "email": "katherine.price@kubernetestech.com",
+        "source": "referral",
+        "score": 85,
+        "status": "contacted"
+    },
+    {
+        "id": "95",
+        "name": "Howard Bennett",
+        "company": "DockerTech Solutions",
+        "email": "howard@dockertech.com",
+        "source": "trade_show",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "96",
+        "name": "Virginia Wood",
+        "company": "ServerlessTech Corp",
+        "email": "virginia.wood@serverlesstech.com",
+        "source": "cold_call",
+        "score": 92,
+        "status": "proposal"
+    },
+    {
+        "id": "97",
+        "name": "Steven Barnes",
+        "company": "EdgeComputing Tech",
+        "email": "steven@edgecomputing.com",
+        "source": "website",
+        "score": 74,
+        "status": "new"
+    },
+    {
+        "id": "98",
+        "name": "Helen Hughes",
+        "company": "DistributedSystems Pro",
+        "email": "helen.hughes@distributedsystems.com",
+        "source": "email_campaign",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "99",
+        "name": "Lawrence Butler",
+        "company": "ScalabilityTech Corp",
+        "email": "lawrence@scalabilitytech.com",
+        "source": "social_media",
+        "score": 81,
+        "status": "qualified"
+    },
+    {
+        "id": "100",
+        "name": "Judith Flores",
+        "company": "PerformanceTech Solutions",
+        "email": "judith.flores@performancetech.com",
+        "source": "partnership",
+        "score": 94,
+        "status": "won"
+    },
+    {
+        "id": "101",
+        "name": "George Washington",
+        "company": "OptimizationTech Pro",
+        "email": "george@optimizationtech.com",
+        "source": "website",
+        "score": 68,
+        "status": "new"
+    },
+    {
+        "id": "102",
+        "name": "Nancy Henderson",
+        "company": "CachingTech Solutions",
+        "email": "nancy.henderson@cachingtech.com",
+        "source": "referral",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "103",
+        "name": "Charles Coleman",
+        "company": "LoadBalancingTech",
+        "email": "charles@loadbalancingtech.com",
+        "source": "trade_show",
+        "score": 83,
+        "status": "qualified"
+    },
+    {
+        "id": "104",
+        "name": "Deborah Jenkins",
+        "company": "CDNTech Corp",
+        "email": "deborah.jenkins@cdntech.com",
+        "source": "cold_call",
+        "score": 90,
+        "status": "proposal"
+    },
+    {
+        "id": "105",
+        "name": "Christopher Perry",
+        "company": "ContentDelivery Pro",
+        "email": "christopher@contentdelivery.com",
+        "source": "website",
+        "score": 72,
+        "status": "new"
+    },
+    {
+        "id": "106",
+        "name": "Dorothy Powell",
+        "company": "StreamingTech Solutions",
+        "email": "dorothy.powell@streamingtech.com",
+        "source": "email_campaign",
+        "score": 87,
+        "status": "contacted"
+    },
+    {
+        "id": "107",
+        "name": "Paul Long",
+        "company": "VideoTech Systems",
+        "email": "paul@videotech.com",
+        "source": "social_media",
+        "score": 78,
+        "status": "qualified"
+    },
+    {
+        "id": "108",
+        "name": "Lisa Patterson",
+        "company": "AudioTech Corp",
+        "email": "lisa.patterson@audiotech.com",
+        "source": "partnership",
+        "score": 85,
+        "status": "lost"
+    },
+    {
+        "id": "109",
+        "name": "Mark Ramirez",
+        "company": "BroadcastTech Pro",
+        "email": "mark@broadcasttech.com",
+        "source": "website",
+        "score": 79,
+        "status": "new"
+    },
+    {
+        "id": "110",
+        "name": "Sandra Watson",
+        "company": "TeleTech Solutions",
+        "email": "sandra.watson@teletech.com",
+        "source": "referral",
+        "score": 91,
+        "status": "contacted"
+    },
+    {
+        "id": "111",
+        "name": "Kenneth Brooks",
+        "company": "CommunicationTech",
+        "email": "kenneth@communicationtech.com",
+        "source": "trade_show",
+        "score": 73,
+        "status": "qualified"
+    },
+    {
+        "id": "112",
+        "name": "Donna Kelly",
+        "company": "MessagingTech Corp",
+        "email": "donna.kelly@messagingtech.com",
+        "source": "cold_call",
+        "score": 88,
+        "status": "proposal"
+    },
+    {
+        "id": "113",
+        "name": "Joshua Sanders",
+        "company": "ChatTech Solutions",
+        "email": "joshua@chattech.com",
+        "source": "website",
+        "score": 76,
+        "status": "new"
+    },
+    {
+        "id": "114",
+        "name": "Kimberly Price",
+        "company": "VoIPTech Pro",
+        "email": "kimberly.price@voiptech.com",
+        "source": "email_campaign",
+        "score": 92,
+        "status": "contacted"
+    },
+    {
+        "id": "115",
+        "name": "Brian Bennett",
+        "company": "UnifiedCommTech",
+        "email": "brian@unifiedcommtech.com",
+        "source": "social_media",
+        "score": 80,
+        "status": "qualified"
+    },
+    {
+        "id": "116",
+        "name": "Ashley Wood",
+        "company": "CollaborationTech",
+        "email": "ashley.wood@collaborationtech.com",
+        "source": "partnership",
+        "score": 84,
+        "status": "won"
+    },
+    {
+        "id": "117",
+        "name": "Gary Barnes",
+        "company": "VideoConferenceTech",
+        "email": "gary@videoconferencetech.com",
+        "source": "website",
+        "score": 77,
+        "status": "new"
+    },
+    {
+        "id": "118",
+        "name": "Cynthia Hughes",
+        "company": "WebinarTech Solutions",
+        "email": "cynthia.hughes@webinartech.com",
+        "source": "referral",
+        "score": 89,
+        "status": "contacted"
+    },
+    {
+        "id": "119",
+        "name": "Roger Butler",
+        "company": "PresentationTech",
+        "email": "roger@presentationtech.com",
+        "source": "trade_show",
+        "score": 75,
+        "status": "qualified"
+    },
+    {
+        "id": "120",
+        "name": "Amy Flores",
+        "company": "DocumentTech Corp",
+        "email": "amy.flores@documenttech.com",
+        "source": "cold_call",
+        "score": 93,
+        "status": "proposal"
+    },
+    {
+        "id": "121",
+        "name": "Justin Washington",
+        "company": "ArchiveTech Solutions",
+        "email": "justin@archivetech.com",
+        "source": "website",
+        "score": 71,
+        "status": "new"
+    },
+    {
+        "id": "122",
+        "name": "Martha Henderson",
+        "company": "BackupTech Pro",
+        "email": "martha.henderson@backuptech.com",
+        "source": "email_campaign",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "123",
+        "name": "Benjamin Coleman",
+        "company": "DisasterRecovery Tech",
+        "email": "benjamin@disasterrecoverytech.com",
+        "source": "social_media",
+        "score": 82,
+        "status": "qualified"
+    },
+    {
+        "id": "124",
+        "name": "Janice Jenkins",
+        "company": "BusinessContinuity Pro",
+        "email": "janice.jenkins@businesscontinuity.com",
+        "source": "partnership",
+        "score": 87,
+        "status": "lost"
+    },
+    {
+        "id": "125",
+        "name": "Frank Perry",
+        "company": "InfrastructureTech",
+        "email": "frank@infrastructuretech.com",
+        "source": "website",
+        "score": 78,
+        "status": "new"
+    },
+    {
+        "id": "126",
+        "name": "Brenda Powell",
+        "company": "HardwareTech Solutions",
+        "email": "brenda.powell@hardwaretech.com",
+        "source": "referral",
+        "score": 90,
+        "status": "contacted"
+    },
+    {
+        "id": "127",
+        "name": "Jesse Long",
+        "company": "NetworkingTech Corp",
+        "email": "jesse@networkingtech.com",
+        "source": "trade_show",
+        "score": 74,
+        "status": "qualified"
+    },
+    {
+        "id": "128",
+        "name": "Marilyn Patterson",
+        "company": "RouterTech Pro",
+        "email": "marilyn.patterson@routertech.com",
+        "source": "cold_call",
+        "score": 85,
+        "status": "proposal"
+    },
+    {
+        "id": "129",
+        "name": "Bruce Ramirez",
+        "company": "SwitchTech Solutions",
+        "email": "bruce@switchtech.com",
+        "source": "website",
+        "score": 81,
+        "status": "new"
+    },
+    {
+        "id": "130",
+        "name": "Julie Watson",
+        "company": "FirewallTech Corp",
+        "email": "julie.watson@firewalltech.com",
+        "source": "email_campaign",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "131",
+        "name": "Wayne Brooks",
+        "company": "SecurityAppliance Pro",
+        "email": "wayne@securityappliance.com",
+        "source": "social_media",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "132",
+        "name": "Catherine Kelly",
+        "company": "EndpointSecurity Tech",
+        "email": "catherine.kelly@endpointsecurity.com",
+        "source": "partnership",
+        "score": 92,
+        "status": "won"
+    },
+    {
+        "id": "133",
+        "name": "Lawrence Sanders",
+        "company": "AntivirusTech Solutions",
+        "email": "lawrence@antivirustech.com",
+        "source": "website",
+        "score": 73,
+        "status": "new"
+    },
+    {
+        "id": "134",
+        "name": "Lori Price",
+        "company": "MalwareProtection Pro",
+        "email": "lori.price@malwareprotection.com",
+        "source": "referral",
+        "score": 89,
+        "status": "contacted"
+    },
+    {
+        "id": "135",
+        "name": "Arthur Bennett",
+        "company": "ThreatDetection Tech",
+        "email": "arthur@threatdetection.com",
+        "source": "trade_show",
+        "score": 77,
+        "status": "qualified"
+    },
+    {
+        "id": "136",
+        "name": "Gloria Wood",
+        "company": "IncidentResponse Corp",
+        "email": "gloria.wood@incidentresponse.com",
+        "source": "cold_call",
+        "score": 84,
+        "status": "proposal"
+    },
+    {
+        "id": "137",
+        "name": "Harold Barnes",
+        "company": "ForensicsTech Solutions",
+        "email": "harold@forensicstech.com",
+        "source": "website",
+        "score": 80,
+        "status": "new"
+    },
+    {
+        "id": "138",
+        "name": "Theresa Hughes",
+        "company": "ComplianceTech Pro",
+        "email": "theresa.hughes@compliancetech.com",
+        "source": "email_campaign",
+        "score": 91,
+        "status": "contacted"
+    },
+    {
+        "id": "139",
+        "name": "Eugene Butler",
+        "company": "AuditTech Corp",
+        "email": "eugene@audittech.com",
+        "source": "social_media",
+        "score": 75,
+        "status": "qualified"
+    },
+    {
+        "id": "140",
+        "name": "Norma Flores",
+        "company": "GovernanceTech Solutions",
+        "email": "norma.flores@governancetech.com",
+        "source": "partnership",
+        "score": 86,
+        "status": "lost"
+    },
+    {
+        "id": "141",
+        "name": "Carl Washington",
+        "company": "RiskManagement Tech",
+        "email": "carl@riskmanagementtech.com",
+        "source": "website",
+        "score": 79,
+        "status": "new"
+    },
+    {
+        "id": "142",
+        "name": "Denise Henderson",
+        "company": "PolicyTech Pro",
+        "email": "denise.henderson@policytech.com",
+        "source": "referral",
+        "score": 87,
+        "status": "contacted"
+    },
+    {
+        "id": "143",
+        "name": "Ralph Coleman",
+        "company": "ProcedureTech Corp",
+        "email": "ralph@proceduretech.com",
+        "source": "trade_show",
+        "score": 82,
+        "status": "qualified"
+    },
+    {
+        "id": "144",
+        "name": "Beverly Jenkins",
+        "company": "WorkflowTech Solutions",
+        "email": "beverly.jenkins@workflowtech.com",
+        "source": "cold_call",
+        "score": 88,
+        "status": "proposal"
+    },
+    {
+        "id": "145",
+        "name": "Gerald Perry",
+        "company": "ProcessTech Pro",
+        "email": "gerald@processtech.com",
+        "source": "website",
+        "score": 74,
+        "status": "new"
+    },
+    {
+        "id": "146",
+        "name": "Ann Powell",
+        "company": "AutomationWorkflow Tech",
+        "email": "ann.powell@automationworkflow.com",
+        "source": "email_campaign",
+        "score": 90,
+        "status": "contacted"
+    },
+    {
+        "id": "147",
+        "name": "Harold Long",
+        "company": "TaskManagement Corp",
+        "email": "harold@taskmanagement.com",
+        "source": "social_media",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "148",
+        "name": "Jean Patterson",
+        "company": "ProductivityTech Solutions",
+        "email": "jean.patterson@productivitytech.com",
+        "source": "partnership",
+        "score": 93,
+        "status": "won"
+    },
+    {
+        "id": "149",
+        "name": "Alan Ramirez",
+        "company": "EfficiencyTech Pro",
+        "email": "alan@efficiencytech.com",
+        "source": "website",
+        "score": 71,
+        "status": "new"
+    },
+    {
+        "id": "150",
+        "name": "Cheryl Watson",
+        "company": "TimeManagement Tech",
+        "email": "cheryl.watson@timemanagementtech.com",
+        "source": "referral",
+        "score": 85,
+        "status": "contacted"
+    },
+    {
+        "id": "151",
+        "name": "Donald Brooks",
+        "company": "SchedulingTech Corp",
+        "email": "donald@schedulingtech.com",
+        "source": "trade_show",
+        "score": 78,
+        "status": "qualified"
+    },
+    {
+        "id": "152",
+        "name": "Paula Kelly",
+        "company": "CalendarTech Solutions",
+        "email": "paula.kelly@calendartech.com",
+        "source": "cold_call",
+        "score": 89,
+        "status": "proposal"
+    },
+    {
+        "id": "153",
+        "name": "Roy Sanders",
+        "company": "RemindeTech Pro",
+        "email": "roy@remindertech.com",
+        "source": "website",
+        "score": 77,
+        "status": "new"
+    },
+    {
+        "id": "154",
+        "name": "Janice Price",
+        "company": "NotificationTech Corp",
+        "email": "janice.price@notificationtech.com",
+        "source": "email_campaign",
+        "score": 84,
+        "status": "contacted"
+    },
+    {
+        "id": "155",
+        "name": "Louis Bennett",
+        "company": "AlertTech Solutions",
+        "email": "louis@alerttech.com",
+        "source": "social_media",
+        "score": 81,
+        "status": "qualified"
+    },
+    {
+        "id": "156",
+        "name": "Ruby Wood",
+        "company": "MonitoringAlert Pro",
+        "email": "ruby.wood@monitoringalert.com",
+        "source": "partnership",
+        "score": 87,
+        "status": "lost"
+    },
+    {
+        "id": "157",
+        "name": "Johnny Barnes",
+        "company": "StatusTech Corp",
+        "email": "johnny@statustech.com",
+        "source": "website",
+        "score": 75,
+        "status": "new"
+    },
+    {
+        "id": "158",
+        "name": "Diana Hughes",
+        "company": "HealthCheckTech Solutions",
+        "email": "diana.hughes@healthchecktech.com",
+        "source": "referral",
+        "score": 92,
+        "status": "contacted"
+    },
+    {
+        "id": "159",
+        "name": "Terry Butler",
+        "company": "DiagnosticTech Pro",
+        "email": "terry@diagnostictech.com",
+        "source": "trade_show",
+        "score": 73,
+        "status": "qualified"
+    },
+    {
+        "id": "160",
+        "name": "Evelyn Flores",
+        "company": "TroubleshootTech Corp",
+        "email": "evelyn.flores@troubleshoottech.com",
+        "source": "cold_call",
+        "score": 88,
+        "status": "proposal"
+    },
+    {
+        "id": "161",
+        "name": "Wayne Washington",
+        "company": "MaintenanceSchedule Tech",
+        "email": "wayne@maintenanceschedule.com",
+        "source": "website",
+        "score": 79,
+        "status": "new"
+    },
+    {
+        "id": "162",
+        "name": "Gloria Henderson",
+        "company": "PreventiveTech Solutions",
+        "email": "gloria.henderson@preventivetech.com",
+        "source": "email_campaign",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "163",
+        "name": "Eugene Coleman",
+        "company": "PredictiveTech Pro",
+        "email": "eugene@predictivetech.com",
+        "source": "social_media",
+        "score": 82,
+        "status": "qualified"
+    },
+    {
+        "id": "164",
+        "name": "Frances Jenkins",
+        "company": "MachineLearning Tech",
+        "email": "frances.jenkins@machinelearningtech.com",
+        "source": "partnership",
+        "score": 94,
+        "status": "won"
+    },
+    {
+        "id": "165",
+        "name": "Philip Perry",
+        "company": "DeepLearningTech Corp",
+        "email": "philip@deeplearningtech.com",
+        "source": "website",
+        "score": 70,
+        "status": "new"
+    },
+    {
+        "id": "166",
+        "name": "Marie Powell",
+        "company": "NeuralNetworkTech",
+        "email": "marie.powell@neuralnetworktech.com",
+        "source": "referral",
+        "score": 91,
+        "status": "contacted"
+    },
+    {
+        "id": "167",
+        "name": "Fred Long",
+        "company": "ComputerVision Pro",
+        "email": "fred@computervision.com",
+        "source": "trade_show",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "168",
+        "name": "Doris Patterson",
+        "company": "NaturalLanguage Tech",
+        "email": "doris.patterson@naturallanguagetech.com",
+        "source": "cold_call",
+        "score": 87,
+        "status": "proposal"
+    },
+    {
+        "id": "169",
+        "name": "Willie Ramirez",
+        "company": "SpeechRecognition Corp",
+        "email": "willie@speechrecognition.com",
+        "source": "website",
+        "score": 78,
+        "status": "new"
+    },
+    {
+        "id": "170",
+        "name": "Joan Watson",
+        "company": "TextAnalytics Solutions",
+        "email": "joan.watson@textanalytics.com",
+        "source": "email_campaign",
+        "score": 89,
+        "status": "contacted"
+    },
+    {
+        "id": "171",
+        "name": "Carl Brooks",
+        "company": "SentimentAnalysis Pro",
+        "email": "carl@sentimentanalysis.com",
+        "source": "social_media",
+        "score": 74,
+        "status": "qualified"
+    },
+    {
+        "id": "172",
+        "name": "Katherine Kelly",
+        "company": "RecommendationTech",
+        "email": "katherine.kelly@recommendationtech.com",
+        "source": "partnership",
+        "score": 85,
+        "status": "lost"
+    },
+    {
+        "id": "173",
+        "name": "Jack Sanders",
+        "company": "PersonalizationTech Corp",
+        "email": "jack@personalizationtech.com",
+        "source": "website",
+        "score": 80,
+        "status": "new"
+    },
+    {
+        "id": "174",
+        "name": "Judy Price",
+        "company": "CustomizationTech Solutions",
+        "email": "judy.price@customizationtech.com",
+        "source": "referral",
+        "score": 83,
+        "status": "contacted"
+    },
+    {
+        "id": "175",
+        "name": "Samuel Bennett",
+        "company": "AdaptiveTech Pro",
+        "email": "samuel@adaptivetech.com",
+        "source": "trade_show",
+        "score": 77,
+        "status": "qualified"
+    },
+    {
+        "id": "176",
+        "name": "Rose Wood",
+        "company": "ResponsiveTech Corp",
+        "email": "rose.wood@responsivetech.com",
+        "source": "cold_call",
+        "score": 90,
+        "status": "proposal"
+    },
+    {
+        "id": "177",
+        "name": "Joe Barnes",
+        "company": "SmartInterface Tech",
+        "email": "joe@smartinterfacetech.com",
+        "source": "website",
+        "score": 72,
+        "status": "new"
+    },
+    {
+        "id": "178",
+        "name": "Lois Hughes",
+        "company": "IntelligentUI Solutions",
+        "email": "lois.hughes@intelligentui.com",
+        "source": "email_campaign",
+        "score": 88,
+        "status": "contacted"
+    },
+    {
+        "id": "179",
+        "name": "Ralph Butler",
+        "company": "AdaptiveInterface Pro",
+        "email": "ralph@adaptiveinterface.com",
+        "source": "social_media",
+        "score": 75,
+        "status": "qualified"
+    },
+    {
+        "id": "180",
+        "name": "Andrea Flores",
+        "company": "UserExperience Tech",
+        "email": "andrea.flores@userexperiencetech.com",
+        "source": "partnership",
+        "score": 92,
+        "status": "won"
+    },
+    {
+        "id": "181",
+        "name": "Victor Washington",
+        "company": "AccessibilityTech Corp",
+        "email": "victor@accessibilitytech.com",
+        "source": "website",
+        "score": 71,
+        "status": "new"
+    },
+    {
+        "id": "182",
+        "name": "Irene Henderson",
+        "company": "InclusiveTech Solutions",
+        "email": "irene.henderson@inclusivetech.com",
+        "source": "referral",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "183",
+        "name": "Albert Coleman",
+        "company": "UniversalDesign Pro",
+        "email": "albert@universaldesign.com",
+        "source": "trade_show",
+        "score": 79,
+        "status": "qualified"
+    },
+    {
+        "id": "184",
+        "name": "Sara Jenkins",
+        "company": "AssistiveTech Corp",
+        "email": "sara.jenkins@assistivetech.com",
+        "source": "cold_call",
+        "score": 84,
+        "status": "proposal"
+    },
+    {
+        "id": "185",
+        "name": "George Perry",
+        "company": "EnablementTech Solutions",
+        "email": "george@enablementtech.com",
+        "source": "website",
+        "score": 81,
+        "status": "new"
+    },
+    {
+        "id": "186",
+        "name": "Janet Powell",
+        "company": "EmpowermentTech Pro",
+        "email": "janet.powell@empowermenttech.com",
+        "source": "email_campaign",
+        "score": 87,
+        "status": "contacted"
+    },
+    {
+        "id": "187",
+        "name": "Raymond Long",
+        "company": "DigitalEquity Corp",
+        "email": "raymond@digitalequity.com",
+        "source": "social_media",
+        "score": 76,
+        "status": "qualified"
+    },
+    {
+        "id": "188",
+        "name": "Kathryn Patterson",
+        "company": "TechForGood Solutions",
+        "email": "kathryn.patterson@techforgood.com",
+        "source": "partnership",
+        "score": 93,
+        "status": "lost"
+    },
+    {
+        "id": "189",
+        "name": "Gregory Ramirez",
+        "company": "SocialImpact Tech",
+        "email": "gregory@socialimpacttech.com",
+        "source": "website",
+        "score": 78,
+        "status": "new"
+    },
+    {
+        "id": "190",
+        "name": "Debra Watson",
+        "company": "SustainableTech Corp",
+        "email": "debra.watson@sustainabletech.com",
+        "source": "referral",
+        "score": 89,
+        "status": "contacted"
+    },
+    {
+        "id": "191",
+        "name": "Frank Brooks",
+        "company": "GreenTech Solutions",
+        "email": "frank@greentechsolutions.com",
+        "source": "trade_show",
+        "score": 73,
+        "status": "qualified"
+    },
+    {
+        "id": "192",
+        "name": "Carolyn Kelly",
+        "company": "CleanTech Pro",
+        "email": "carolyn.kelly@cleantechpro.com",
+        "source": "cold_call",
+        "score": 85,
+        "status": "proposal"
+    },
+    {
+        "id": "193",
+        "name": "Howard Sanders",
+        "company": "EcoFriendlyTech Corp",
+        "email": "howard@ecofriendlytech.com",
+        "source": "website",
+        "score": 80,
+        "status": "new"
+    },
+    {
+        "id": "194",
+        "name": "Shirley Price",
+        "company": "EnvironmentalTech Solutions",
+        "email": "shirley.price@environmentaltech.com",
+        "source": "email_campaign",
+        "score": 91,
+        "status": "contacted"
+    },
+    {
+        "id": "195",
+        "name": "Arthur Bennett",
+        "company": "ConservationTech Pro",
+        "email": "arthur@conservationtech.com",
+        "source": "social_media",
+        "score": 74,
+        "status": "qualified"
+    },
+    {
+        "id": "196",
+        "name": "Virginia Wood",
+        "company": "RenewableTech Corp",
+        "email": "virginia@renewabletech.com",
+        "source": "partnership",
+        "score": 88,
+        "status": "won"
+    },
+    {
+        "id": "197",
+        "name": "Russell Barnes",
+        "company": "CarbonNeutral Tech",
+        "email": "russell@carbonneutraltech.com",
+        "source": "website",
+        "score": 77,
+        "status": "new"
+    },
+    {
+        "id": "198",
+        "name": "Betty Hughes",
+        "company": "ZeroWaste Solutions",
+        "email": "betty.hughes@zerowastesolutions.com",
+        "source": "referral",
+        "score": 86,
+        "status": "contacted"
+    },
+    {
+        "id": "199",
+        "name": "Eugene Butler",
+        "company": "CircularEconomy Pro",
+        "email": "eugene@circulareconomy.com",
+        "source": "trade_show",
+        "score": 82,
+        "status": "qualified"
+    },
+    {
+        "id": "200",
+        "name": "Helen Flores",
+        "company": "FutureTech Corp",
+        "email": "helen.flores@futuretech.com",
+        "source": "cold_call",
+        "score": 95,
+        "status": "proposal"
+    }
+]
