@@ -146,7 +146,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                             }`}
                         title={`Sort: ${getSortLabel()}`}
                     >
-                        <HiBars3BottomLeft className="w-5 h-5" />
+                        <HiBars3BottomLeft data-testid="sort-icon" className="w-5 h-5" />
                     </button>
 
                     {showSortPopover && (

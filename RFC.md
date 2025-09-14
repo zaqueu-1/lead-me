@@ -148,6 +148,7 @@ App
 - React 19.1.1 + TypeScript 5.8.3
 - Tailwind CSS 3.4.17
 - Vite 7.1.2 (build tool)
+- Playwright (end-to-end testing)
 - Local storage for persistence
 
 ## Key Workflows
@@ -196,6 +197,21 @@ App
 - CSV export for backup
 - Import with duplicate detection
 - Error handling for storage failures
+
+## Testing Strategy
+
+### End-to-End Testing (Playwright)
+- **Navigation Tests**: Page load, tab switching, view modes, dark mode
+- **Filter & Search Tests**: Search debouncing, filter panel, status/source filtering, sorting
+- **Lead Management Tests**: CRUD operations, detail panel, lead conversion, data persistence
+- **Import/Export Tests**: CSV export, import validation, duplicate handling
+
+### Test Coverage
+- Multi-browser testing (Chromium, Firefox, WebKit)
+- Responsive design validation
+- User interaction flows
+- Data integrity verification
+- Error handling scenarios
 
 ---
 

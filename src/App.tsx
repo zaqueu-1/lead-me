@@ -109,18 +109,20 @@ function App() {
             <div>
               <nav className="flex space-x-4 sm:space-x-8 overflow-x-auto">
                 <button
+                  data-testid="leads-tab"
                   onClick={() => setActiveTab('leads')}
                   className={`py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap transition-colors ${activeTab === 'leads'
-                    ? 'border-brand-primary text-brand-primary dark:text-brand-primary-light'
+                    ? 'border-brand-primary text-brand-primary dark:text-brand-primary-light bg-brand-primary bg-opacity-5'
                     : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
                     }`}
                 >
                   Leads ({leads.length})
                 </button>
                 <button
+                  data-testid="opportunities-tab"
                   onClick={() => setActiveTab('opportunities')}
                   className={`py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap transition-colors ${activeTab === 'opportunities'
-                    ? 'border-brand-primary text-brand-primary dark:text-brand-primary-light'
+                    ? 'border-brand-primary text-brand-primary dark:text-brand-primary-light bg-brand-primary bg-opacity-5'
                     : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
                     }`}
                 >

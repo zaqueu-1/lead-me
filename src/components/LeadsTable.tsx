@@ -91,7 +91,7 @@ export const LeadsTable: React.FC<LeadsTableProps> = ({
     }
 
     return (
-        <div className="overflow-hidden border border-gray-200 dark:border-gray-700 rounded-lg">
+        <div data-testid="leads-table" className="overflow-hidden border border-gray-200 dark:border-gray-700 rounded-lg">
             <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                     <thead className="bg-gray-50 dark:bg-gray-800">

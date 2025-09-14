@@ -104,7 +104,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
 
     return (
         <>
-            <div className="fixed right-0 top-0 h-full w-full sm:w-80 lg:w-96 bg-white dark:bg-gray-800 shadow-xl z-50 overflow-y-auto border-l border-gray-200 dark:border-gray-700">
+            <div data-testid="lead-detail-panel" className="fixed right-0 top-0 h-full w-full sm:w-80 lg:w-96 bg-white dark:bg-gray-800 shadow-xl z-50 overflow-y-auto border-l border-gray-200 dark:border-gray-700">
                 <div className="flex flex-col h-full">
                     <div className="p-6 border-b border-gray-200 dark:border-gray-700">
                         <div className="flex items-center justify-between">
@@ -112,6 +112,8 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                             <button
                                 onClick={onClose}
                                 className="text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400"
+                                title="Close panel"
+                                aria-label="Close panel"
                             >
                                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

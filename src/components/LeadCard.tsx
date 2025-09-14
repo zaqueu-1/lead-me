@@ -11,6 +11,7 @@ interface LeadCardProps {
 const LeadCardComponent: React.FC<LeadCardProps> = ({ lead, isSelected, onSelect }) => {
     return (
         <div
+            data-testid="lead-card"
             onClick={() => onSelect(lead)}
             className={`bg-white dark:bg-gray-800 rounded-lg border shadow-sm hover:shadow-md dark:shadow-gray-900/20 transition-all duration-200 cursor-pointer transform hover:-translate-y-1 ${isSelected ? 'ring-2 ring-brand-primary dark:ring-brand-primary-light border-brand-primary dark:border-brand-primary-light shadow-md' : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
                 }`}
