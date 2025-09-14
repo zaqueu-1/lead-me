@@ -8,12 +8,12 @@ export const STATUS_LABELS = {
 } as const;
 
 export const STATUS_COLORS = {
-    new: 'bg-blue-100 text-blue-800',
-    contacted: 'bg-yellow-100 text-yellow-800',
-    qualified: 'bg-purple-100 text-purple-800',
-    proposal: 'bg-orange-100 text-orange-800',
-    won: 'bg-green-100 text-green-800',
-    lost: 'bg-red-100 text-red-800'
+    new: 'bg-brand-neutral-50 text-brand-primary dark:bg-brand-primary/20 dark:text-brand-primary-light',
+    contacted: 'bg-status-yellow-bg text-status-yellow-text dark:bg-status-yellow-dark-bg dark:text-status-yellow-dark-text',
+    qualified: 'bg-status-purple-bg text-status-purple-text dark:bg-status-purple-dark-bg dark:text-status-purple-dark-text',
+    proposal: 'bg-status-orange-bg text-status-orange-text dark:bg-status-orange-dark-bg dark:text-status-orange-dark-text',
+    won: 'bg-status-green-bg text-status-green-text dark:bg-status-green-dark-bg dark:text-status-green-dark-text',
+    lost: 'bg-status-red-bg text-status-red-text dark:bg-status-red-dark-bg dark:text-status-red-dark-text'
 } as const;
 
 export const SOURCE_LABELS = {
@@ -36,10 +36,34 @@ export const STAGE_LABELS = {
 } as const;
 
 export const STAGE_COLORS = {
-    prospecting: 'bg-blue-100 text-blue-800',
-    qualification: 'bg-yellow-100 text-yellow-800',
-    proposal: 'bg-purple-100 text-purple-800',
-    negotiation: 'bg-orange-100 text-orange-800',
-    'closed-won': 'bg-green-100 text-green-800',
-    'closed-lost': 'bg-red-100 text-red-800'
+    prospecting: 'bg-brand-neutral-50 text-brand-primary dark:bg-brand-primary/20 dark:text-brand-primary-light',
+    qualification: 'bg-status-yellow-bg text-status-yellow-text dark:bg-status-yellow-dark-bg dark:text-status-yellow-dark-text',
+    proposal: 'bg-status-purple-bg text-status-purple-text dark:bg-status-purple-dark-bg dark:text-status-purple-dark-text',
+    negotiation: 'bg-status-orange-bg text-status-orange-text dark:bg-status-orange-dark-bg dark:text-status-orange-dark-text',
+    'closed-won': 'bg-status-green-bg text-status-green-text dark:bg-status-green-dark-bg dark:text-status-green-dark-text',
+    'closed-lost': 'bg-status-red-bg text-status-red-text dark:bg-status-red-dark-bg dark:text-status-red-dark-text'
 } as const;
+
+export const getProgressBarColor = (percentage: number): string => {
+    if (percentage <= 25) {
+        return 'bg-progress-red'; 
+    } else if (percentage <= 50) {
+        return 'bg-progress-orange'; 
+    } else if (percentage <= 75) {
+        return 'bg-progress-yellow'; 
+    } else {
+        return 'bg-progress-green'; 
+    }
+};
+
+export const getProgressBarGradient = (percentage: number): string => {
+    if (percentage <= 25) {
+        return 'from-red-500 to-red-600'; 
+    } else if (percentage <= 50) {
+        return 'from-orange-500 to-orange-600'; 
+    } else if (percentage <= 75) {
+        return 'from-yellow-500 to-yellow-600'; 
+    } else {
+        return 'from-green-500 to-green-600'; 
+    }
+};

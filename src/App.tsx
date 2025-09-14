@@ -63,9 +63,9 @@ function App() {
             <div className="flex justify-between py-4 space-y-2 sm:space-y-0">
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
-                  lead<span className="text-blue-500 dark:text-blue-400">.</span>me
+                  lead<span className="text-brand-primary dark:text-brand-primary-light">.</span>me
                 </h1>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Manage leads effortlessly</p>
+                <p className="text-sm text-brand-text-muted dark:text-gray-300">Manage leads effortlessly</p>
               </div>
               <div className="flex items-center gap-4">
                 <DarkModeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
@@ -106,7 +106,7 @@ function App() {
                 <button
                   onClick={() => setActiveTab('leads')}
                   className={`py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap transition-colors ${activeTab === 'leads'
-                    ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                    ? 'border-brand-primary text-brand-primary dark:text-brand-primary-light'
                     : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
                     }`}
                 >
@@ -115,7 +115,7 @@ function App() {
                 <button
                   onClick={() => setActiveTab('opportunities')}
                   className={`py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap transition-colors ${activeTab === 'opportunities'
-                    ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                    ? 'border-brand-primary text-brand-primary dark:text-brand-primary-light'
                     : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600'
                     }`}
                 >

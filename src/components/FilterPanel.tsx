@@ -116,7 +116,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                         placeholder="Search by name or company..."
                         value={filters.search}
                         onChange={handleSearchChange}
-                        className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
                     />
                 </div>
 
@@ -124,7 +124,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                     <button
                         onClick={() => setShowSortPopover(!showSortPopover)}
                         className={`p-2 rounded-md border transition-colors duration-200 ${showSortPopover
-                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
+                            ? 'border-brand-primary bg-brand-neutral-50 dark:bg-brand-primary/20 text-brand-primary dark:text-brand-primary-light'
                             : 'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                             }`}
                         title={`Sort: ${getSortLabel()}`}
@@ -144,11 +144,11 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                                         <button
                                             key={option.key}
                                             onClick={() => handleSortSelect(option.sortBy, option.sortOrder)}
-                                            className={`w-full text-left px-3 py-2 text-sm flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${isSelected ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 font-medium' : 'text-gray-700 dark:text-gray-300'
+                                            className={`w-full text-left px-3 py-2 text-sm flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${isSelected ? 'bg-brand-neutral-50 dark:bg-brand-primary/20 text-brand-primary dark:text-brand-primary-light font-medium' : 'text-gray-700 dark:text-gray-300'
                                                 }`}
                                         >
                                             <span>{option.label}</span>
-                                            {isSelected && <HiCheck className="w-4 h-4 text-blue-600 dark:text-blue-400" />}
+                                            {isSelected && <HiCheck className="w-4 h-4 text-brand-primary dark:text-brand-primary-light" />}
                                         </button>
                                     );
                                 })}
@@ -161,7 +161,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                     <button
                         onClick={() => setShowFilters(!showFilters)}
                         className={`p-2 rounded-md border transition-colors duration-200 ${showFilters || hasActiveFilters
-                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
+                            ? 'border-brand-primary bg-brand-neutral-50 dark:bg-brand-primary/20 text-brand-primary dark:text-brand-primary-light'
                             : 'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
                             }`}
                         title="Toggle Filters"
@@ -170,7 +170,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                     </button>
 
                     {activeFiltersCount > 0 && (
-                        <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                        <div className="absolute -top-1 -right-1 bg-brand-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
                             {activeFiltersCount}
                         </div>
                     )}
@@ -187,7 +187,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                             <select
                                 onChange={handleStatusFilterChange}
                                 defaultValue=""
-                                className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                                className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-sm"
                             >
                                 <option value="">Filter by: Status</option>
                                 {Object.entries(STATUS_LABELS).map(([value, label]) => (
@@ -209,7 +209,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                             <select
                                 onChange={handleSourceFilterChange}
                                 defaultValue=""
-                                className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                                className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-sm"
                             >
                                 <option value="">Filter by: Source</option>
                                 {Object.entries(SOURCE_LABELS).map(([value, label]) => (

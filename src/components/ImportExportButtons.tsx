@@ -66,7 +66,7 @@ export const ImportExportButtons: React.FC<ImportExportButtonsProps> = ({
             <button
                 onClick={handleImportClick}
                 disabled={disabled || importing}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded-md transition-colors duration-200 text-sm font-medium"
+                className="flex items-center gap-2 px-4 py-2 bg-brand-primary hover:bg-brand-primary-dark disabled:bg-gray-400 text-white rounded-md transition-colors duration-200 text-sm font-medium"
             >
                 {importing ? (
                     <>

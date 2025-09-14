@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { Lead } from '../types';
 import { validateEmail } from '../utils/validation';
-import { STATUS_LABELS, STAGE_LABELS } from '../constants';
+import { STATUS_LABELS, STAGE_LABELS, getProgressBarGradient } from '../constants';
 
 interface LeadDetailPanelProps {
     lead: Lead | null;
@@ -127,7 +127,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                 <span className="text-2xl font-bold text-gray-900 dark:text-white">{lead.score}</span>
                                 <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                                     <div
-                                        className="bg-blue-500 dark:bg-blue-400 h-3 rounded-full"
+                                        className={`bg-gradient-to-r ${getProgressBarGradient(lead.score)} h-3 rounded-full`}
                                         style={{ width: `${lead.score}%` }}
                                     ></div>
                                 </div>
@@ -152,7 +152,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                         type="email"
                                         value={editValues.email}
                                         onChange={(e) => setEditValues(prev => ({ ...prev, email: e.target.value }))}
-                                        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
+                                        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
                                             }`}
                                     />
                                     {errors.email && (
@@ -162,7 +162,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                         <button
                                             onClick={() => handleSave('email')}
                                             disabled={saveLoading}
-                                            className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 disabled:opacity-50"
+                                            className="px-3 py-1 bg-brand-primary text-white rounded text-sm hover:bg-brand-primary-dark disabled:opacity-50"
                                         >
                                             {saveLoading ? 'Saving...' : 'Save'}
                                         </button>
@@ -179,7 +179,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                     <p className="text-sm text-gray-900 dark:text-white">{lead.email}</p>
                                     <button
                                         onClick={() => handleEdit('email')}
-                                        className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 text-sm"
+                                        className="text-brand-primary dark:text-brand-primary-light hover:text-brand-primary-dark dark:hover:text-brand-primary-lighter text-sm"
                                     >
                                         Edit
                                     </button>
@@ -194,7 +194,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                     <select
                                         value={editValues.status}
                                         onChange={(e) => setEditValues(prev => ({ ...prev, status: e.target.value }))}
-                                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary"
                                     >
                                         {Object.entries(STATUS_LABELS).map(([value, label]) => (
                                             <option key={value} value={value}>{label}</option>
@@ -204,7 +204,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                         <button
                                             onClick={() => handleSave('status')}
                                             disabled={saveLoading}
-                                            className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 disabled:opacity-50"
+                                            className="px-3 py-1 bg-brand-primary text-white rounded text-sm hover:bg-brand-primary-dark disabled:opacity-50"
                                         >
                                             {saveLoading ? 'Saving...' : 'Save'}
                                         </button>
@@ -218,12 +218,12 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                 </div>
                             ) : (
                                 <div className="flex items-center justify-between">
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400">
+                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-neutral-50 dark:bg-brand-primary/20 text-brand-primary dark:text-brand-primary-light">
                                         {STATUS_LABELS[lead.status]}
                                     </span>
                                     <button
                                         onClick={() => handleEdit('status')}
-                                        className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 text-sm"
+                                        className="text-brand-primary dark:text-brand-primary-light hover:text-brand-primary-dark dark:hover:text-brand-primary-lighter text-sm"
                                     >
                                         Edit
                                     </button>
@@ -270,7 +270,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                     <select
                                         value={opportunityData.stage}
                                         onChange={(e) => setOpportunityData(prev => ({ ...prev, stage: e.target.value }))}
-                                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary"
                                     >
                                         {Object.entries(STAGE_LABELS).map(([value, label]) => (
                                             <option key={value} value={value}>{label}</option>
@@ -289,7 +289,7 @@ export const LeadDetailPanel: React.FC<LeadDetailPanelProps> = ({
                                         placeholder="0.00"
                                         min="0"
                                         step="0.01"
-                                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary"
                                     />
                                 </div>
                             </div>

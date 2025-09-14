@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Lead } from '../types';
-import { STATUS_LABELS, STATUS_COLORS, SOURCE_LABELS } from '../constants';
+import { STATUS_LABELS, STATUS_COLORS, SOURCE_LABELS, getProgressBarGradient } from '../constants';
 
 interface LeadCardProps {
     lead: Lead;
@@ -12,7 +12,7 @@ const LeadCardComponent: React.FC<LeadCardProps> = ({ lead, isSelected, onSelect
     return (
         <div
             onClick={() => onSelect(lead)}
-            className={`bg-white dark:bg-gray-800 rounded-lg border shadow-sm hover:shadow-md dark:shadow-gray-900/20 transition-all duration-200 cursor-pointer transform hover:-translate-y-1 ${isSelected ? 'ring-2 ring-blue-500 dark:ring-blue-400 border-blue-500 dark:border-blue-400 shadow-md' : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+            className={`bg-white dark:bg-gray-800 rounded-lg border shadow-sm hover:shadow-md dark:shadow-gray-900/20 transition-all duration-200 cursor-pointer transform hover:-translate-y-1 ${isSelected ? 'ring-2 ring-brand-primary dark:ring-brand-primary-light border-brand-primary dark:border-brand-primary-light shadow-md' : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
                 }`}
         >
             <div className="p-4">
@@ -28,7 +28,7 @@ const LeadCardComponent: React.FC<LeadCardProps> = ({ lead, isSelected, onSelect
                     <div className="flex items-center gap-2 ml-3">
                         <div className="relative w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-4 flex items-center justify-center">
                             <div
-                                className="bg-blue-500 dark:bg-blue-400 h-4 rounded-full transition-all duration-300 absolute left-0"
+                                className={`bg-gradient-to-r ${getProgressBarGradient(lead.score)} h-4 rounded-full transition-all duration-300 absolute left-0`}
                                 style={{ width: `${lead.score}%` }}
                             ></div>
                             <span className="text-[12px] font-bold text-white drop-shadow-sm relative z-10">
@@ -55,7 +55,7 @@ const LeadCardComponent: React.FC<LeadCardProps> = ({ lead, isSelected, onSelect
             </div>
 
             {isSelected && (
-                <div className="h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-b-lg"></div>
+                <div className="h-1 bg-gradient-to-r from-brand-primary-light to-brand-primary rounded-b-lg"></div>
             )}
         </div>
     );
