@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { Lead, Opportunity, LeadFilters } from '../types';
 import {
     saveFiltersToStorage,
@@ -9,6 +9,7 @@ import {
     loadOpportunitiesFromStorage
 } from '../utils/localStorage';
 import { generateId } from '../utils/validation';
+import { exportLeadsToCSV, parseCSVToLeads, readCSVFile } from '../utils/csvUtils';
 import leadsData from '../data/leads.json';
 
 const DEFAULT_FILTERS: LeadFilters = {
@@ -20,10 +21,15 @@ const DEFAULT_FILTERS: LeadFilters = {
 };
 
 export const useLeads = () => {
+    const getInitialFilters = (): LeadFilters => {
+        const savedFilters = loadFiltersFromStorage();
+        return savedFilters ? { ...DEFAULT_FILTERS, ...savedFilters } : DEFAULT_FILTERS;
+    };
+
     const [leads, setLeads] = useState<Lead[]>([]);
     const [opportunities, setOpportunities] = useState<Opportunity[]>([]);
     const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
-    const [filters, setFilters] = useState<LeadFilters>(DEFAULT_FILTERS);
+    const [filters, setFilters] = useState<LeadFilters>(getInitialFilters);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [isInitialized, setIsInitialized] = useState(false);
@@ -56,11 +62,6 @@ export const useLeads = () => {
                 setLeads(loadedLeads);
                 setOpportunities(loadedOpportunities);
 
-                const savedFilters = loadFiltersFromStorage();
-                if (savedFilters) {
-                    setFilters(prev => ({ ...prev, ...savedFilters }));
-                }
-
                 setError(null);
             } catch (err) {
                 setError('Error loading lead data');
@@ -74,8 +75,10 @@ export const useLeads = () => {
     }, []);
 
     useEffect(() => {
-        saveFiltersToStorage(filters);
-    }, [filters]);
+        if (isInitialized) {
+            saveFiltersToStorage(filters);
+        }
+    }, [filters, isInitialized]);
 
     useEffect(() => {
         if (isInitialized) {
@@ -91,7 +94,7 @@ export const useLeads = () => {
         }
     }, [opportunities, isInitialized]);
 
-    const filteredLeads = useCallback(() => {
+    const filteredLeads = useMemo(() => {
         let filtered = [...leads];
 
         if (filters.search) {
@@ -214,8 +217,56 @@ export const useLeads = () => {
         }
     }, []);
 
+    const exportLeads = useCallback(() => {
+        try {
+            const currentLeads = filteredLeads.length > 0 ? filteredLeads : leads;
+            exportLeadsToCSV(currentLeads);
+        } catch (err) {
+            setError('Error exporting leads');
+        }
+    }, [filteredLeads, leads]);
+
+    const importLeads = useCallback(async (file: File) => {
+        try {
+            setLoading(true);
+            setError(null);
+
+            const csvContent = await readCSVFile(file);
+            const importedLeads = parseCSVToLeads(csvContent);
+
+            if (importedLeads.length === 0) {
+                throw new Error('No valid leads found in the CSV file');
+            }
+
+            const existingEmails = new Set(leads.map(lead => lead.email.toLowerCase()));
+            const newLeads = importedLeads.filter(lead =>
+                !existingEmails.has(lead.email.toLowerCase())
+            );
+
+            if (newLeads.length === 0) {
+                throw new Error('All leads in the CSV already exist (checked by email)');
+            }
+
+            setLeads(prev => [...prev, ...newLeads]);
+
+            const duplicateCount = importedLeads.length - newLeads.length;
+            let message = `Successfully imported ${newLeads.length} leads`;
+            if (duplicateCount > 0) {
+                message += ` (${duplicateCount} duplicates skipped)`;
+            }
+
+            return { success: true, message, imported: newLeads.length, duplicates: duplicateCount };
+        } catch (err) {
+            const errorMessage = err instanceof Error ? err.message : 'Error importing leads';
+            setError(errorMessage);
+            throw new Error(errorMessage);
+        } finally {
+            setLoading(false);
+        }
+    }, [leads]);
+
     return {
-        leads: filteredLeads(),
+        leads: filteredLeads,
         opportunities,
         selectedLead,
         filters,
@@ -226,6 +277,8 @@ export const useLeads = () => {
         updateLead,
         convertToOpportunity,
         revertToLead,
+        exportLeads,
+        importLeads,
         setError
     };
 };
