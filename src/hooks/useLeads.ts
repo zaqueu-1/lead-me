@@ -17,7 +17,8 @@ const DEFAULT_FILTERS: LeadFilters = {
     statuses: [],
     sources: [],
     sortBy: 'score',
-    sortOrder: 'desc'
+    sortOrder: 'desc',
+    viewMode: 'cards'
 };
 
 export const useLeads = () => {
@@ -238,10 +239,15 @@ export const useLeads = () => {
                 throw new Error('No valid leads found in the CSV file');
             }
 
+            const existingIds = new Set(leads.map(lead => lead.id));
             const existingEmails = new Set(leads.map(lead => lead.email.toLowerCase()));
-            const newLeads = importedLeads.filter(lead =>
-                !existingEmails.has(lead.email.toLowerCase())
-            );
+
+            const newLeads = importedLeads.filter(lead => {
+                const isDuplicateById = existingIds.has(lead.id);
+                const isDuplicateByEmail = existingEmails.has(lead.email.toLowerCase());
+
+                return !isDuplicateById && !isDuplicateByEmail;
+            });
 
             if (newLeads.length === 0) {
                 throw new Error('All leads in the CSV already exist (checked by email)');

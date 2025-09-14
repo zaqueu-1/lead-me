@@ -1,19 +1,27 @@
 import type { Lead } from '../types';
 import { generateId, validateEmail } from './validation';
 
+const escapeCSVField = (field: string | number): string => {
+    const strField = String(field);
+    if (strField.includes(',') || strField.includes('\n') || strField.includes('"')) {
+        return `"${strField.replace(/"/g, '""')}"`;
+    }
+    return strField;
+};
+
 export const exportLeadsToCSV = (leads: Lead[], filename: string = 'leads.csv') => {
     const headers = ['ID', 'Name', 'Company', 'Email', 'Source', 'Score', 'Status'];
 
     const csvContent = [
         headers.join(','),
         ...leads.map(lead => [
-            lead.id,
-            `"${lead.name}"`,
-            `"${lead.company}"`,
-            lead.email,
-            lead.source,
-            lead.score,
-            lead.status
+            escapeCSVField(lead.id),
+            escapeCSVField(lead.name),
+            escapeCSVField(lead.company),
+            escapeCSVField(lead.email),
+            escapeCSVField(lead.source),
+            escapeCSVField(lead.score),
+            escapeCSVField(lead.status)
         ].join(','))
     ].join('\n');
 
@@ -83,8 +91,10 @@ export const parseCSVToLeads = (csvContent: string): Lead[] => {
             continue;
         }
 
+        const leadId = id.trim() && id.trim().length > 0 ? id.trim() : generateId();
+
         leads.push({
-            id: id.trim() || generateId(),
+            id: leadId,
             name: name.trim(),
             company: company.trim(),
             email: email.trim(),
@@ -104,19 +114,25 @@ const parseCSVLine = (line: string): string[] => {
 
     for (let i = 0; i < line.length; i++) {
         const char = line[i];
+        const nextChar = line[i + 1];
 
         if (char === '"') {
-            inQuotes = !inQuotes;
+            if (inQuotes && nextChar === '"') {
+                current += '"';
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
         } else if (char === ',' && !inQuotes) {
-            result.push(current.trim());
+            result.push(current);
             current = '';
         } else {
             current += char;
         }
     }
 
-    result.push(current.trim());
-    return result.map(val => val.replace(/^"|"$/g, ''));
+    result.push(current);
+    return result;
 };
 
 export const readCSVFile = (file: File): Promise<string> => {

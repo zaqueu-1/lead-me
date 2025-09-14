@@ -2,6 +2,7 @@ import React from 'react';
 import type { Lead, LeadFilters } from '../types';
 import { LeadCard } from './LeadCard';
 import { LeadCardSkeleton } from './LeadCardSkeleton';
+import { LeadsTable } from './LeadsTable';
 import { FilterPanel } from './FilterPanel';
 import { ImportExportButtons } from './ImportExportButtons';
 import { useVirtualScrolling } from '../hooks/useVirtualScrolling';
@@ -12,8 +13,10 @@ interface LeadsListProps {
     selectedLeadId: string | null;
     filters: LeadFilters;
     loading: boolean;
+    viewMode: LeadFilters['viewMode'];
     onSelectLead: (lead: Lead) => void;
     onFiltersChange: (filters: LeadFilters) => void;
+    onViewModeToggle: () => void;
     onExportLeads: () => void;
     onImportLeads: (file: File) => Promise<{ success: boolean; message: string; imported: number; duplicates: number }>;
 }
@@ -23,8 +26,10 @@ const LeadsListComponent: React.FC<LeadsListProps> = ({
     selectedLeadId,
     filters,
     loading: initialLoading,
+    viewMode,
     onSelectLead,
     onFiltersChange,
+    onViewModeToggle,
     onExportLeads,
     onImportLeads
 }) => {
@@ -45,10 +50,11 @@ const LeadsListComponent: React.FC<LeadsListProps> = ({
         return (
             <div className="h-full flex flex-col">
                 <div className="py-4 px-4 space-y-4">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2">
                         <div className="flex-1">
                             <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse"></div>
                         </div>
+                        <div className="h-10 w-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse"></div>
                         <div className="h-10 w-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse"></div>
                         <div className="h-10 w-10 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse"></div>
                     </div>
@@ -69,6 +75,8 @@ const LeadsListComponent: React.FC<LeadsListProps> = ({
             <FilterPanel
                 filters={filters}
                 onFiltersChange={onFiltersChange}
+                viewMode={viewMode}
+                onViewModeToggle={onViewModeToggle}
             />
 
             <div className="flex-1 overflow-y-auto py-4 custom-scrollbar">
@@ -84,7 +92,7 @@ const LeadsListComponent: React.FC<LeadsListProps> = ({
                             </p>
                         </div>
                     </div>
-                ) : (
+                ) : viewMode === 'cards' ? (
                     <>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-4" onClick={(e) => e.stopPropagation()}>
                             {displayedLeads.map((lead) => (
@@ -101,6 +109,19 @@ const LeadsListComponent: React.FC<LeadsListProps> = ({
                                     <LeadCardSkeleton key={`skeleton-${index}`} />
                                 ))
                             )}
+                        </div>
+
+                        {hasMore && <div ref={sentinelRef} className="h-1" />}
+                    </>
+                ) : (
+                    <>
+                        <div className="px-4" onClick={(e) => e.stopPropagation()}>
+                            <LeadsTable
+                                leads={displayedLeads}
+                                selectedLeadId={selectedLeadId}
+                                onSelectLead={onSelectLead}
+                                isLoading={isLoading}
+                            />
                         </div>
 
                         {hasMore && <div ref={sentinelRef} className="h-1" />}
@@ -129,8 +150,10 @@ const areEqual = (prevProps: LeadsListProps, nextProps: LeadsListProps) => {
         prevProps.leads === nextProps.leads &&
         prevProps.filters === nextProps.filters &&
         prevProps.loading === nextProps.loading &&
+        prevProps.viewMode === nextProps.viewMode &&
         prevProps.onSelectLead === nextProps.onSelectLead &&
         prevProps.onFiltersChange === nextProps.onFiltersChange &&
+        prevProps.onViewModeToggle === nextProps.onViewModeToggle &&
         prevProps.onExportLeads === nextProps.onExportLeads &&
         prevProps.onImportLeads === nextProps.onImportLeads &&
         prevProps.selectedLeadId === nextProps.selectedLeadId

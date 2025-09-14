@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import type { LeadFilters } from '../types';
 import { FilterBadge } from './FilterBadge';
+import { ViewToggleButton } from './ViewToggleButton';
 import { STATUS_LABELS, SOURCE_LABELS } from '../constants';
 import { HiAdjustmentsHorizontal, HiCheck, HiBars3BottomLeft } from 'react-icons/hi2';
 
 interface FilterPanelProps {
     filters: LeadFilters;
     onFiltersChange: (filters: LeadFilters) => void;
+    viewMode: LeadFilters['viewMode'];
+    onViewModeToggle: () => void;
 }
 
-const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersChange }) => {
+const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersChange, viewMode, onViewModeToggle }) => {
     const [showFilters, setShowFilters] = useState(false);
     const [showSortPopover, setShowSortPopover] = useState(false);
     const sortPopoverRef = useRef<HTMLDivElement>(null);
@@ -109,7 +112,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
 
     return (
         <div className="py-4 px-4 space-y-4" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
                 <div className="flex-1">
                     <input
                         type="text"
@@ -175,6 +178,11 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                         </div>
                     )}
                 </div>
+
+                <ViewToggleButton
+                    viewMode={viewMode}
+                    onToggle={onViewModeToggle}
+                />
             </div>
 
             {showFilters && (
@@ -262,7 +270,9 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
 const areEqual = (prevProps: FilterPanelProps, nextProps: FilterPanelProps) => {
     return (
         prevProps.filters === nextProps.filters &&
-        prevProps.onFiltersChange === nextProps.onFiltersChange
+        prevProps.onFiltersChange === nextProps.onFiltersChange &&
+        prevProps.viewMode === nextProps.viewMode &&
+        prevProps.onViewModeToggle === nextProps.onViewModeToggle
     );
 };
 

@@ -23,6 +23,7 @@ export interface LeadFilters {
     sources: string[];
     sortBy: 'score' | 'name' | 'company';
     sortOrder: 'asc' | 'desc';
+    viewMode: 'cards' | 'table';
 }
 
 export interface AppState {

@@ -31,6 +31,11 @@ function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('leads');
   const [isPanelOpen, setIsPanelOpen] = useState(false);
 
+  const handleViewModeToggle = useCallback(() => {
+    const newViewMode = filters.viewMode === 'cards' ? 'table' : 'cards';
+    setFilters({ ...filters, viewMode: newViewMode });
+  }, [filters, setFilters]);
+
   const handleSelectLead = useCallback((lead: typeof selectedLead) => {
     setSelectedLead(lead);
     if (!isPanelOpen) {
@@ -133,8 +138,10 @@ function App() {
                   selectedLeadId={selectedLead?.id || null}
                   filters={filters}
                   loading={loading}
+                  viewMode={filters.viewMode}
                   onSelectLead={handleSelectLead}
                   onFiltersChange={setFilters}
+                  onViewModeToggle={handleViewModeToggle}
                   onExportLeads={exportLeads}
                   onImportLeads={importLeads}
                 />
