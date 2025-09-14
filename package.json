@@ -7,7 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:dev": "docker-compose up --build",
+    "docker:dev:down": "docker-compose down",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up --build",
+    "docker:prod:down": "docker-compose -f docker-compose.prod.yml down",
+    "docker:build:dev": "docker build --target development -t leads-console:dev .",
+    "docker:build:prod": "docker build --target production -t leads-console:prod .",
+    "docker:clean": "docker system prune -a"
   },
   "dependencies": {
     "react": "^19.1.1",

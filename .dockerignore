@@ -1,0 +1,23 @@
+# Deps
+node_modules
+*.log
+
+# Build outputs
+dist
+
+# Git and Docker
+.git
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docs
+README.md
