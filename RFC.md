@@ -12,27 +12,29 @@ lead.me is a web application for managing sales leads and opportunities. Built w
 
 ### Key Features
 - Lead tracking and management
-- Advanced filtering and search
+- Advanced filtering and search with debounce
 - Lead-to-opportunity conversion
 - CSV import/export
 - Dark/Light mode
+- Cards and Table view modes
 - Virtual scrolling for performance
 - Local storage persistence
 
 ## Functional Requirements
 
 ### Lead Management (FR-001)
-- Display leads in card grid layout
+- Display leads in card grid layout or table layout
+- Toggle between view modes with saved preference
 - Show lead information: name, company, email, source, score, status
 - Select leads to view/edit details
 - Update lead status and information
 
 ### Filtering & Search (FR-002)
-- Text search across name and company
+- Text search across name and company with 200ms debounce
 - Filter by status: new, contacted, qualified, proposal, won, lost
 - Filter by source: website, referral, social_media, email_campaign, trade_show, cold_call, partnership
 - Sort by score, name, or company (asc/desc)
-- Persist filter state
+- Persist filter state and view mode
 
 ### Lead Details (FR-003)
 - Side panel with detailed lead information
@@ -55,7 +57,7 @@ lead.me is a web application for managing sales leads and opportunities. Built w
 
 ### Performance
 - Initial load: < 3 seconds
-- Filtering: < 200ms response
+- Filtering: < 200ms response with debounced search
 - Virtual scrolling for large datasets
 - Support 1000+ leads efficiently
 
@@ -106,6 +108,7 @@ export interface LeadFilters {
     sources: string[];
     sortBy: 'score' | 'name' | 'company';
     sortOrder: 'asc' | 'desc';
+    viewMode: 'cards' | 'table';
 }
 ```
 
@@ -127,8 +130,8 @@ export interface AppState {
 ```
 App
 ├── LeadsList
-│   ├── FilterPanel
-│   ├── LeadCard[]
+│   ├── FilterPanel (with ViewToggleButton)
+│   ├── LeadCard[] | LeadsTable
 │   └── ImportExportButtons
 ├── LeadDetailPanel
 └── OpportunitiesTable
@@ -137,6 +140,7 @@ App
 ### Key Hooks
 - **useLeads**: Main business logic and state management
 - **useDarkMode**: Theme switching
+- **useDebounce**: Search input debouncing (200ms)
 - **useVirtualScrolling**: Performance optimization
 - **useInfiniteScroll**: Progressive loading
 
@@ -174,7 +178,7 @@ App
 
 - Virtual scrolling for large lists
 - Component memoization (React.memo)
-- Debounced search (300ms)
+- Debounced search (200ms)
 - Lazy loading
 - Efficient filtering algorithms
 

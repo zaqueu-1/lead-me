@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import type { LeadFilters } from '../types';
 import { FilterBadge } from './FilterBadge';
 import { ViewToggleButton } from './ViewToggleButton';
+import { useDebounce } from '../hooks/useDebounce';
 import { STATUS_LABELS, SOURCE_LABELS } from '../constants';
 import { HiAdjustmentsHorizontal, HiCheck, HiBars3BottomLeft } from 'react-icons/hi2';
 
@@ -15,7 +16,20 @@ interface FilterPanelProps {
 const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersChange, viewMode, onViewModeToggle }) => {
     const [showFilters, setShowFilters] = useState(false);
     const [showSortPopover, setShowSortPopover] = useState(false);
+    const [searchValue, setSearchValue] = useState(filters.search);
     const sortPopoverRef = useRef<HTMLDivElement>(null);
+
+    const debouncedSearchValue = useDebounce(searchValue, 200);
+
+    useEffect(() => {
+        setSearchValue(filters.search);
+    }, [filters.search]);
+
+    useEffect(() => {
+        if (debouncedSearchValue !== filters.search) {
+            onFiltersChange({ ...filters, search: debouncedSearchValue });
+        }
+    }, [debouncedSearchValue, filters, onFiltersChange]);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -31,7 +45,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
     }, [showSortPopover]);
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onFiltersChange({ ...filters, search: e.target.value });
+        setSearchValue(e.target.value);
     };
 
     const handleStatusFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -117,7 +131,7 @@ const FilterPanelComponent: React.FC<FilterPanelProps> = ({ filters, onFiltersCh
                     <input
                         type="text"
                         placeholder="Search by name or company..."
-                        value={filters.search}
+                        value={searchValue}
                         onChange={handleSearchChange}
                         className="w-full px-3 py-2 border border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
                     />

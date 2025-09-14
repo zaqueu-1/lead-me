@@ -122,8 +122,8 @@ export const LeadsTable: React.FC<LeadsTableProps> = ({
                                 key={lead.id}
                                 onClick={() => onSelectLead(lead)}
                                 className={`cursor-pointer transition-colors duration-150 hover:bg-gray-50 dark:hover:bg-gray-800 ${selectedLeadId === lead.id
-                                        ? 'bg-brand-primary/5 dark:bg-brand-primary/10 border-l-4 border-brand-primary'
-                                        : ''
+                                    ? 'bg-brand-primary/5 dark:bg-brand-primary/10 border-l-4 border-brand-primary'
+                                    : ''
                                     }`}
                             >
                                 <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
